@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Flappy\FlappyMovement.cs" />
      <Compile Include="Assets\Scripts\Ground\MoveOffset.cs" />
+     <Compile Include="Assets\Scripts\Obstacle\ObstacleScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/ocean/Documents/UnityProjects/FlappyBird/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

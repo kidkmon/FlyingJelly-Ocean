@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class MoveOffset : MonoBehaviour {
 
+	private Renderer _renderer;
 
-	private Material currentMaterial;
-	private float offset;
-	public float speed;
-	
-	// Use this for initialization
-	void Start () {
-		currentMaterial = GetComponent<SpriteRenderer>().material;	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		offset += 0.001f;
+	public float scrollSpeed = 0.5F;
 
-		currentMaterial.SetTextureOffset("_MainTex", new Vector2(offset * speed, 0));
-	}
+	void Start() {
+        _renderer = GetComponent<Renderer>();
+    }
+    void Update() {
+        float offset = Time.time * scrollSpeed;
+        _renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+    }
 }
