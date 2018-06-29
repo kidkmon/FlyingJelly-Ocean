@@ -12,7 +12,9 @@ public class MoveOffset : MonoBehaviour {
         _renderer = GetComponent<Renderer>();
     }
     void Update() {
-        float offset = Time.time * scrollSpeed;
-        _renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+        if(!FlappyMovement.isDead){
+            float offset = Time.time * scrollSpeed;
+            _renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+        }
     }
 }
