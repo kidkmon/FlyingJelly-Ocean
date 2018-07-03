@@ -9,10 +9,18 @@ public class ObstacleMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		obstacleRb.velocity = new Vector2(obstacleSpeed * Time.deltaTime, obstacleRb.velocity.y);
+		if(!FlappyMovement.isDead){
+			obstacleRb.velocity = new Vector2(obstacleSpeed * Time.deltaTime, obstacleRb.velocity.y);
+		}
+		else{
+			obstacleRb.velocity = Vector2.zero;
+		}
 	}
 
-	void OnBecameInvisible(){
-		Destroy(gameObject);
+	void OnCollisionEnter2D(Collision2D collision){
+		if(collision.gameObject.CompareTag("Bounds")){
+			Destroy(gameObject);
+		}
 	}
+
 }
