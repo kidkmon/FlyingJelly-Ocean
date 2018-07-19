@@ -9,7 +9,7 @@ public class ObstacleMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(!FlappyMovement.isDead){
+		if(!JellyController.isDead){
 			obstacleRb.velocity = new Vector2(obstacleSpeed * Time.deltaTime, obstacleRb.velocity.y);
 		}
 		else{

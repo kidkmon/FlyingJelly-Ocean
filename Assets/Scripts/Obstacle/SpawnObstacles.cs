@@ -16,7 +16,7 @@ public class SpawnObstacles : MonoBehaviour {
 	IEnumerator spawnObstacles(){
 		yield return new WaitForSeconds(rateSpawn);
 		int randomNumber = Random.Range(0, obstaclesPrefab.Length);
-		if(!FlappyMovement.isDead && FlappyMovement.gameStarted){
+		if(!JellyController.isDead && JellyController.gameStarted){
 			Instantiate(obstaclesPrefab[randomNumber], new Vector3(transform.position.x, obstaclesPrefab[randomNumber].transform.position.y, transform.position.z), transform.rotation);
 			StartCoroutine("spawnObstacles");
 		}

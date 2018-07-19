@@ -51,15 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Flappy\FlappyMovement.cs" />
-     <Compile Include="Assets\Scripts\Ground\MoveOffset.cs" />
+     <Compile Include="Assets\Scripts\HUD\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\Jelly\JellyController.cs" />
      <Compile Include="Assets\Scripts\Obstacle\ObstacleMovement.cs" />
      <Compile Include="Assets\Scripts\Obstacle\SpawnObstacles.cs" />
+     <Compile Include="Assets\Scripts\Parallax\ParallaxController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Ocean/Documents/FlappyBird/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Ocean/Documents/Unity Projects/FlappyBird/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Ocean/Documents/FlappyBird/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ocean/Documents/Unity Projects/FlappyBird/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
