@@ -164,7 +164,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002298236, y: -0.24062955}
+  m_Offset: {x: 0.002298236, y: -0.25900108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -175,7 +175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.00793, y: 0.24874091}
+  m_Size: {x: 1.00793, y: 0.21199787}
   m_EdgeRadius: 0
 --- !u!23 &15745324
 MeshRenderer:
@@ -527,7 +527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137, y: 263.99997}
+  m_AnchoredPosition: {x: 143.6, y: 263.99997}
   m_SizeDelta: {x: 131.5, y: 125.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331923569
@@ -1037,7 +1037,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 0.25
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.25
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   gameOver: {fileID: 1280398950}
   restartButton: {fileID: 303024171}
   scoreTxt: {fileID: 1736091749}
-  jumpForce: 35
+  jumpForce: 25
 --- !u!82 &1065164166
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1379,7 +1379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207, y: 264}
+  m_AnchoredPosition: {x: -209.5, y: 264}
   m_SizeDelta: {x: 131.5, y: 125.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087395340
@@ -1859,7 +1859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rateSpawn: 1.5
   obstaclesPrefab:
-  - {fileID: 1378960998810866, guid: 7fb9802ffaa051d4db89336a2b4b10da, type: 2}
+  - {fileID: 1462438365491834, guid: 7fb9802ffaa051d4db89336a2b4b10da, type: 2}
   - {fileID: 1265811308801638, guid: f9f1bbe7dad96c44d8e5c6d9d389e519, type: 2}
   - {fileID: 1703197811097894, guid: 5bbfdcb84bd827c4a8564718b49273ff, type: 2}
   - {fileID: 1309992712935746, guid: 770d073ffa1fb5b4d96c214f664d15e9, type: 2}
