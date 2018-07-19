@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class JellyController : MonoBehaviour {
 
 	public GameObject gameStart;
 	public GameObject gameOver;
+	public GameObject restartButton;
 	public GameObject scoreTxt;
 
-	private Rigidbody2D flappyRg;
-	private Animator flappyAnimator;
+	private Rigidbody2D jellyRg;
+	private Animator jellyAnimator;
 	public float jumpForce;
 
 	public static bool isDead;
@@ -19,9 +19,9 @@ public class JellyController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		flappyRg = GetComponent<Rigidbody2D>();
-		flappyAnimator = GetComponent<Animator>();
-		flappyRg.isKinematic = true;
+		jellyRg = GetComponent<Rigidbody2D>();
+		jellyAnimator = GetComponent<Animator>();
+		jellyRg.isKinematic = true;
 		isDead = false;
 		gameStarted = false;
 		gameStart.SetActive(true);
@@ -29,28 +29,23 @@ public class JellyController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!gameStarted && Input.GetButtonDown("Jump")){
+		if(!gameStarted && Input.GetMouseButtonDown(0)){
 			gameStart.SetActive(false);
 			scoreTxt.SetActive(true);
 			gameStarted = true;
-			flappyRg.isKinematic = false;
-			flappyAnimator.SetBool("isBegin", false);	
+			jellyRg.isKinematic = false;
+			jellyAnimator.SetBool("isBegin", false);	
 		}
 
 		if(gameStarted){
-			if(Input.GetButtonDown("Jump") && !isDead){
-				flappyAnimator.SetBool("isJumping", true);
-				flappyRg.AddForce(new Vector2(0, jumpForce));
+			if(Input.GetMouseButtonDown(0) && !isDead){
+				jellyAnimator.SetBool("isJumping", true);
+				jellyRg.AddForce(new Vector2(0, jumpForce));
 				GetComponents<AudioSource>()[0].Play();
 			}
 
-			if(Input.GetButtonUp("Jump") && !isDead){
-				flappyAnimator.SetBool("isJumping", false);
-			}
-
-			if(Input.GetButtonDown("Jump") && isDead){
-				Scene scene = SceneManager.GetActiveScene();
-				SceneManager.LoadScene(scene.name);
+			if(Input.GetMouseButtonUp(0) && !isDead){
+				jellyAnimator.SetBool("isJumping", false);
 			}
 		}
 		
@@ -58,11 +53,7 @@ public class JellyController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D	collision){
 		if(!collision.gameObject.CompareTag("Bounds") && !isDead){
-			scoreTxt.SetActive(false);
-			gameOver.SetActive(true);
-			isDead = true;
-			flappyAnimator.SetBool("isDead", true);
-			GetComponents<AudioSource>()[1].Play();
+			StartCoroutine("JellyDead");
 		}
 	}
 
@@ -70,4 +61,16 @@ public class JellyController : MonoBehaviour {
 		scoreTxt.GetComponent<Text>().text =  (int.Parse(scoreTxt.GetComponent<Text>().text) + 1).ToString();
 		GetComponents<AudioSource>()[2].Play();
 	}
+
+	IEnumerator JellyDead(){
+		scoreTxt.SetActive(false);
+		gameOver.SetActive(true);
+		restartButton.SetActive(true);
+		isDead = true;
+		jellyAnimator.SetBool("isDead", true);
+		GetComponents<AudioSource>()[1].Play();
+		yield return new WaitForSeconds(0.25f);
+		gameObject.SetActive(false);
+	}
+
 }
