@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E2CAAA8F-0C44-B0E3-BA3C-99A137BC00AC}</ProjectGuid>
+    <ProjectGuid>{702D3732-0C1A-52A4-F77C-4FB77FE4E4AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,10 +58,10 @@
      <Compile Include="Assets\Scripts\Obstacle\SpawnObstacles.cs" />
      <Compile Include="Assets\Scripts\Parallax\ParallaxController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Ocean/Documents/Unity/Unity Projects/FlyingJelly/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Ocean/Documents/Unity/Unity Projects/FlyingJelly-Template/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Ocean/Documents/Unity/Unity Projects/FlyingJelly/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ocean/Documents/Unity/Unity Projects/FlyingJelly-Template/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
