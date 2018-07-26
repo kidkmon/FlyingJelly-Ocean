@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/CursoUnity.unity
+- path: Assets/Scenes/GameplayScene.unity
   isLoaded: 1
   isActive: 1
