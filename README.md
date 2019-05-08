@@ -1,5 +1,3 @@
-![3](https://user-images.githubusercontent.com/18224116/44406304-48e4da80-a529-11e8-84fb-9baa4a51364c.PNG) ![4](https://user-images.githubusercontent.com/18224116/44406271-2fdc2980-a529-11e8-9559-d5d6f1c1e2e3.PNG)
-
 
 # Flying Jelly
  
@@ -7,7 +5,10 @@
  
 **DISCLAIMER**: *FlyingJelly is a game developed to introduce the student in the development of digital games and enable him to acquire the necessary knowledge so that he can develop his first game in the course of Digital Games Laboratory Using Unity Platform. [(OCEAN)](http://www.oceanbrasil.com)*
        
-         
+Menu Screen             |  Game Screen
+:-------------------------:|:-------------------------:
+![](https://user-images.githubusercontent.com/18224116/44406304-48e4da80-a529-11e8-84fb-9baa4a51364c.PNG)  |  ![](https://user-images.githubusercontent.com/18224116/44406271-2fdc2980-a529-11e8-9559-d5d6f1c1e2e3.PNG)
+
 ## Index
 * [Scenes](https://github.com/kidkmon/FlyingJelly-Ocean/tree/master/Assets/Scenes)
 * [Scripts](https://github.com/kidkmon/FlyingJelly-Ocean/tree/master/Assets/Scripts)
